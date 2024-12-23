@@ -1,0 +1,17 @@
+.promo-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .promo-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .promo-button {
+    background-color: #d81920;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
