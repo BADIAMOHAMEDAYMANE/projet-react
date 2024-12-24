@@ -5,7 +5,7 @@ function PromoSection() {
     <div className={style['promo-section']}>
       <h1 className={style['promo-title']}>{"Faites des économies sur vos voyages d'affaires"}</h1>
       <p className={style['promo-text']}>Adhérez au programme On Business et profitez de réductions directes sur vos vols</p>
-      <button className={style['promo-button']}>Inscrivez-vous ici</button>
+      <button className={style['promo-button']}>Inscrivez-vous</button>
     </div>
   );
 }
