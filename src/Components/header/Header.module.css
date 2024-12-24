@@ -11,18 +11,23 @@
   left: 0;
   width: 100vw;
 }
+
 .logo-section {
   display: flex;
   align-items: center;
 }
+
 .logo {
   height: 40px;
   margin-right: 10px;
 }
+
 .nav {
   display: flex;
   gap: 15px;
+  margin-right: 30px;
 }
+
 .nav-link {
   color: red;
   font-weight: bold;
