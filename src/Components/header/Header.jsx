@@ -15,7 +15,7 @@ function Header() {
         <a href="#" className={style['nav-link']}>
           Réserver
         </a>
-        <a href="#" className={style['nav-link']}>
+        {/* <a href="#" className={style['nav-link']}>
           Gestion de réservations
         </a>
         <a href="#" className={style['nav-link']}>
@@ -23,7 +23,7 @@ function Header() {
         </a>
         <a href="#" className={style['nav-link']}>
           Iberia Plus
-        </a>
+        </a> */}
       </nav>
     </header>
   );
