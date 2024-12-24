@@ -11,7 +11,7 @@ function Header() {
         />
         <span>Iberia</span>
       </div>
-      <nav className="nav">
+      <nav className={style.nav}>
         <a href="#" className={style['nav-link']}>
           Réserver
         </a>

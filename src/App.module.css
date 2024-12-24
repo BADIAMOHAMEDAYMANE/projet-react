@@ -1,4 +1,11 @@
 .main-content {
   text-align: center;
-  padding: 20px;
+  margin-top: 5%;
+  position: relative;
+}
+.destination {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
