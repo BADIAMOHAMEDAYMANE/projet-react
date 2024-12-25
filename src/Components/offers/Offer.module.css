@@ -1,0 +1,48 @@
+.menu-offers {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+
+.offer-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offer-card h3 {
+  font-size: 18px;
+  margin: 10px;
+  color: #333;
+}
+
+.offer-card span {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  display: block;
+  color: #007bff;
+}
+
+.offer-card span::after {
+  content: " DH";
+}
