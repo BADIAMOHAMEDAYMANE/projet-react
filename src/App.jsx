@@ -4,6 +4,8 @@ import Destination from "./Components/destination/Destination";
 import Footer from "./Components/footer/Footer";
 import Header from "./Components/header/Header";
 import PromoSection from "./Components/promoSection/PromoSection";
+import MenuOffers from "./Components/offers/Offer"; // Assurez-vous du bon chemin
+
 function App() {
   return (
     <div>
@@ -14,6 +16,11 @@ function App() {
           <Destination />
         </div>
         <PromoSection />
+        {/* Ajouter la section MenuOffers */}
+        <section className={style["menu-offers"]}>
+          <h2>Nos Meilleures Offres</h2>
+          <MenuOffers />
+        </section>
       </main>
       <Footer />
     </div>
