@@ -1,12 +1,56 @@
 .footer {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  background: #333;
-  color: white;
+  background-color: #f8f9fa;
   text-align: center;
-  right: 20px;
-  padding: 20px;
   font-size: 14px;
-  width: 100vw;
+  border-top: 1px solid #ddd;
+  position: static;
+  bottom: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sponsors {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sponsor-list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 30px;
+  width: max-content;
+}
+.social-media {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 30px;
+  width: max-content;
+}
+
+.sponsor-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.sponsor-logo {
+  width: 100px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.1);
+}
+.copyright {
+  font-size: x-large;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 10px;
+  text-align: center;
+  margin: 0;
 }
