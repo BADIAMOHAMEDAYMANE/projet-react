@@ -1,42 +1,60 @@
+import { useRef } from 'react';
 import style from './Destination.module.css'
+import { useNavigate } from 'react-router';
 
 function Destination() {
+
+  const navigate = useNavigate();
+  
+  const originRef = useRef(null);
+  const destinationRef = useRef(null);
+  const departureDateRef = useRef(null);
+  const arrivalDateRef = useRef(null);
+  const passengersRef = useRef(null);
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    const origin = originRef.current.value;
+    const destination = destinationRef.current.value;
+    const departureDate = departureDateRef.current.value;
+    const arrivalDate = arrivalDateRef.current.value;
+    const passengers = passengersRef.current.value;
+    localStorage.setItem('flightOptions',JSON.stringify({origin,destination,departureDate,arrivalDate,passengers}))
+    navigate('/flights-list')
+  }
   return (
     <div className={style.destination}>
-      <form className={style['destination-form']}>
+      <form onSubmit={handleSubmit} className={style['destination-form']}>
         <div className={style['form-group']}>
-          <label htmlFor="origin">Origine:</label>
-          <input
-            type="text"
-            id="origin"
-            placeholder="Marrakech RAK"
-            className={style.input}
-          />
+          <label>Origine:</label>
+          <input type="text"
+                 className={style.input}
+                 ref={originRef} />
         </div>
         <div className={style['form-group']}>
-          <label htmlFor="destination">Destination:</label>
-          <input
-            type="text"
-            id="destination"
-            placeholder="Madrid MAD"
-            className={style.input}
-          />
+          <label>Destination:</label>
+          <input type="text"
+                 className={style.input}
+                 ref={destinationRef} />
         </div>
         <div className={style['form-group']}>
-          <label htmlFor="departure">Date aller:</label>
-          <input type="date" id="departure" className={style.input} />
+          <label>Date aller:</label>
+          <input type="date"
+                 className={style.input}
+                 ref={departureDateRef} />
         </div>
         <div className={style['form-group']}>
-          <label htmlFor="return">Date retour:</label>
-          <input type="date" id="return" className={style.input} />
+          <label>Date retour:</label>
+          <input type="date"
+                 className={style.input}
+                 ref={arrivalDateRef} />
         </div>
         <div className={style['form-group']}>
-          <label htmlFor="passengers">Passagers:</label>
-          <select id="passengers" className={style.input}>
-            <option>1 Passager</option>
-            <option>2 Passagers</option>
-            <option>3 Passagers</option>
-          </select>
+          <label>Passagers:</label>
+          <input type="number"
+                 className={style.input}
+                 ref={passengersRef}
+                 defaultValue={1} />
         </div>
         <button type="submit" className={style.button}>
           Rechercher
