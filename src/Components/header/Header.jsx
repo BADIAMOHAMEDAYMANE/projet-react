@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import style from './Header.module.css'
 
 function Header() {
@@ -12,18 +13,18 @@ function Header() {
         <span>Iberia</span>
       </div>
       <nav className={style.nav}>
-        <a href="#" className={style['nav-link']}>
+        <Link to="/" className={style['nav-link']}>
           Réserver
-        </a>
-        <a href="#" className={style['nav-link']}>
+        </Link>
+        <Link to="/about" className={style['nav-link']}>
           Gestion de réservations
-        </a>
-        <a href="#" className={style['nav-link']}>
+        </Link>
+        <Link href="#" className={style['nav-link']}>
           Préparer votre voyage
-        </a>
-        <a href="#" className={style['nav-link']}>
+        </Link>
+        <Link href="#" className={style['nav-link']}>
           Iberia Plus
-        </a>
+        </Link>
       </nav>
     </header>
   );
