@@ -16,7 +16,7 @@ function Header() {
         <Link to="/" className={style['nav-link']}>
           Réserver
         </Link>
-        <Link to="/about" className={style['nav-link']}>
+        <Link to="/login" className={style['nav-link']}>
           Gestion de réservations
         </Link>
         <Link href="#" className={style['nav-link']}>

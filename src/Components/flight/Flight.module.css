@@ -1,82 +1,105 @@
 .container {
-    height: 150px;
-    width: 400px;
-    border-radius: 12px;
-    position: relative;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-    background: #e4d4d4;
-  }
-  
-  .container:hover {
-    transform: translateY(-2px);
-  }
-  
-  .from-to {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 0 20px;
-    margin-top: 20px;
-  }
-  
-  .from-to::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 2px;
-    background: #ff4757;
-    transform: translate(-50%, -50%);
-  }
-  
-  .from-to::before {
-    content: '✈️';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    background: white;
-    padding: 0 10px;
-    z-index: 1;
-  }
-  
-  .from, .to {
-    text-align: center;
-  }
-  
-  .from p:first-child, .to p:first-child {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2f3640;
-    margin-bottom: 8px;
-  }
-  
-  .from p:last-child, .to p:last-child {
-    font-size: 1rem;
-    color: #747d8c;
-  }
-  
-  .price {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    border: 2px solid #ff4757;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #ff4757;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .price:hover {
-    background: #ff4757;
-    color: white;
-    border-color: #ff4757;
-  }
+  height: 150px;
+  width: 400px;
+  border-radius: 12px;
+  position: relative;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  background: #e4d4d4;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+.from-to {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.from-to::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background: #ff4757;
+  transform: translate(-50%, -50%);
+}
+
+.from-to::before {
+  content: '✈️';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background: white;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.from, .to {
+  text-align: center;
+}
+
+.from p:first-child, .to p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2f3640;
+  margin-bottom: 8px;
+}
+
+.from p:last-child, .to p:last-child {
+  font-size: 1rem;
+  color: #747d8c;
+}
+
+.date {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4757;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: bold;
+  color: #ff4757;
+  font-size: 1.2rem;
+}
+
+.reserveButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border: 2px solid #ff4757;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #ff4757;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reserveButton:hover {
+  background: #ff4757;
+  color: white;
+  border-color: #ff4757;
+}
