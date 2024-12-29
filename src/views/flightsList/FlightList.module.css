@@ -1,9 +1,9 @@
 .container {
     padding-left: 10px;
+    padding-bottom: 20px;
     background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/08/30/14/dubai-main.jpg?width=1200&height=900&fit=crop');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 .title {
     color: white

@@ -7,26 +7,36 @@ const Flight = ({
   departure_time,
   arrival_time,
 }) => {
-  function refactorTime(time) {
+  function getTime(time) {
     const secondPart = time.split('T')[1];
     const firstPart = secondPart.split('.')[0];
     const thirdPart = firstPart.split(':');
     return thirdPart[0] + ':' + thirdPart[1];
   }
 
+  function getDate(time) {
+    const datePart = time.split('T')[0];
+    const [year, month, day] = datePart.split('-');
+    return `${day}/${month}/${year}`;
+  }
+
   return (
     <div className={style.container}>
+      <div className={style.price}>{price} €</div>
       <div className={style['from-to']}>
         <div className={style.from}>
           <p>{departure}</p>
-          <p>{refactorTime(departure_time)}</p>
+          <p>{getTime(departure_time)}</p>
+        </div>
+        <div className={style.date}>
+          {getDate(departure_time)}
         </div>
         <div className={style.to}>
           <p>{arrival}</p>
-          <p>{refactorTime(arrival_time)}</p>
+          <p>{getTime(arrival_time)}</p>
         </div>
       </div>
-      <div className={style.price}>{price} €</div>
+      <button className={style.reserveButton}>Réserver</button>
     </div>
   );
 };
