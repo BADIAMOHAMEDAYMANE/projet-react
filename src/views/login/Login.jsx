@@ -10,7 +10,7 @@ const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
-  const navigate = useNavigate("/");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const Login = () => {
     try {
       const response = await login(user);
       localStorage.setItem("token", response.token);
-      navigate("/");
+      navigate("/booking-list");
     } catch (e) {
       alert(e);
     }
@@ -33,7 +33,7 @@ const Login = () => {
       try {
         const verification = await verifyToken(token);
         if (verification.isValid) {
-          navigate("/");
+          navigate("/booking-list");
         }
       } catch (e) {
         alert(e);

@@ -103,3 +103,7 @@
   color: white;
   border-color: #ff4757;
 }
+
+.reserveButton:disabled {
+  cursor: not-allowed;
+}
