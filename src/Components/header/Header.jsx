@@ -1,7 +1,13 @@
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import style from './Header.module.css'
 
 function Header() {
+  const navigate = useNavigate()
+  
+  const logout = () => {
+    localStorage.removeItem('token')
+    navigate('/')
+  }
   return (
     <header className={style.header}>
       <div className={style['logo-section']}>
@@ -19,11 +25,8 @@ function Header() {
         <Link to="/login" className={style['nav-link']}>
           Gestion de réservations
         </Link>
-        <Link href="#" className={style['nav-link']}>
-          Préparer votre voyage
-        </Link>
-        <Link href="#" className={style['nav-link']}>
-          Iberia Plus
+        <Link href="#" className={style['nav-link']} onClick={logout}>
+          Se deconnecter
         </Link>
       </nav>
     </header>

@@ -1,11 +1,14 @@
 import style from "./Flight.module.css";
 
 const Flight = ({
+  id,
+  onClick,
   departure,
   arrival,
   price,
   departure_time,
   arrival_time,
+  alreadyBooked,
 }) => {
   function getTime(time) {
     const secondPart = time.split('T')[1];
@@ -19,6 +22,7 @@ const Flight = ({
     const [year, month, day] = datePart.split('-');
     return `${day}/${month}/${year}`;
   }
+
 
   return (
     <div className={style.container}>
@@ -36,7 +40,9 @@ const Flight = ({
           <p>{getTime(arrival_time)}</p>
         </div>
       </div>
-      <button className={style.reserveButton}>Réserver</button>
+      <button className={style.reserveButton}
+              onClick={() => onClick(id)}
+              disabled={alreadyBooked}>{`${alreadyBooked ? 'Vous avez déja reservé' : 'Reserver'}`}</button>
     </div>
   );
 };
